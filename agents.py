@@ -13,7 +13,6 @@ from langchain.llms import Ollama
 
 class MarketingAnalysisAgents:
 	def __init__(self):
-		self.llm = Ollama(model=os.environ['MODEL']),
 		self.OpenAIGPT35 = ChatOpenAI(model_name="gpt-3.5-turbo")
   
 	def product_competitor_agent(self):
