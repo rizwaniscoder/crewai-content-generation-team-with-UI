@@ -1,6 +1,6 @@
+crewai[tools]
 pysqlite3-binary
 chromadb
-'crewai[tools]'
 streamlit
 langchain
 unstructured
