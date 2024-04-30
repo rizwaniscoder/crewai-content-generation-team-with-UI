@@ -100,6 +100,15 @@ class StreamToExpander:
         if "\n" in data:
             self.expander.markdown(''.join(self.buffer), unsafe_allow_html=True)
             self.buffer = []
+def generate_image(prompt, crewai_client):
+    response = crewai_client.images.generate(
+        model="dall-e-3",
+        prompt=prompt,
+        size="1024x1024",
+        quality="standard",
+        n=1,
+    )
+    return response.data[0].url
 
 
 def main():
