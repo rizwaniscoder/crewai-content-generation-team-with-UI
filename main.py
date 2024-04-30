@@ -155,7 +155,10 @@ def main():
 
     # Input OpenAI API key
     openai_api_key = st.text_input("Enter your OpenAI API key:", type="password")
+    os.environ['OPENAI_API_KEY'] = openai_api_key
 
+    serper_api_key = st.text_input("Enter your Serper API key:", type="password")
+    os.environ['SERPER_API_KEY'] = serper_api_key
     # Input fields
     product_website = st.text_input("Product Website", "https://aminutewithmary.com")
     product_details = st.text_area("Product Details")
