@@ -187,7 +187,7 @@ def main():
             image = image_crew.kickoff()
 
             st.subheader("Graphics output from Design-Team")
-            generated_image_url = crewai_client.images.generate_image(image)
+            generated_image_url = generate_image(image, crewai_client)
             st.image(generated_image_url, caption="Generated Image")
 
             st.write("Image Generated.")
